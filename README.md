@@ -15,7 +15,7 @@ This project uses Resend for direct email delivery from the Vercel serverless fu
 Add these environment variables in Vercel:
 
 - `RESEND_API_KEY`
-- `REGISTRATION_TO_EMAIL`
+- `REGISTRATION_TO_EMAIL=its.hassansheraz@gmail.com`
 - `REGISTRATION_FROM_EMAIL`
 
 `REGISTRATION_TO_EMAIL` is the organizer email that receives registrations.
