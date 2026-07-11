@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMAALA Tape Ball Cricket Tournament 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">Team Registration</p>
+        <h1>AMAALA Tape Ball Cricket Tournament 2026</h1>
+        <p class="hero__lead">Register your squad for a full day of competitive tape ball cricket at AMAALA Construction Village.</p>
+        <div class="hero__meta">
+          <span>25 July 2026</span>
+          <span>AMAALA Construction Village</span>
+          <span>100 SAR Registration</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-grid" aria-label="Tournament details and registration form">
+      <aside class="info-panel">
+        <h2>Tournament Information</h2>
+        <dl class="detail-list">
+          <div>
+            <dt>Date</dt>
+            <dd>25 July 2026</dd>
+          </div>
+          <div>
+            <dt>Venue</dt>
+            <dd>AMAALA Construction Village</dd>
+          </div>
+          <div>
+            <dt>Format</dt>
+            <dd>League 7 overs, Semi-Finals 8 overs, Final 10 overs</dd>
+          </div>
+          <div>
+            <dt>Playing XI</dt>
+            <dd>11 players</dd>
+          </div>
+          <div>
+            <dt>Maximum Squad</dt>
+            <dd>15 players</dd>
+          </div>
+          <div>
+            <dt>Registration Fee</dt>
+            <dd>100 SAR</dd>
+          </div>
+          <div>
+            <dt>Closing Date</dt>
+            <dd>18 July 2026</dd>
+          </div>
+        </dl>
+
+        <h2>Contact</h2>
+        <ul class="contact-list">
+          <li><strong>Danish</strong><a href="tel:+966545178294">+966 54 517 8294</a></li>
+          <li><strong>Gul Raiz</strong><a href="tel:+966546042508">+966 54 604 2508</a></li>
+          <li><strong>Nizam Khan</strong><a href="tel:+966577148768">057 714 8768</a></li>
+        </ul>
+      </aside>
+
+      <section class="form-panel">
+        <div class="form-heading">
+          <p class="eyebrow">Register Your Team</p>
+          <h2>Team Registration Form</h2>
+        </div>
+
+        <form id="registrationForm">
+          <fieldset>
+            <legend>Team Information</legend>
+            <div class="field-grid">
+              <label>
+                Team Name <span>*</span>
+                <input type="text" name="teamName" required autocomplete="organization">
+              </label>
+              <label>
+                Captain Name <span>*</span>
+                <input type="text" name="captainName" required autocomplete="name">
+              </label>
+              <label>
+                Mobile Number <span>*</span>
+                <input type="tel" name="mobileNumber" required autocomplete="tel">
+              </label>
+              <label>
+                WhatsApp Number <span>*</span>
+                <input type="tel" name="whatsappNumber" required>
+              </label>
+              <label>
+                Email Address <span>*</span>
+                <input type="email" name="emailAddress" required autocomplete="email">
+              </label>
+              <label>
+                Company/Organization
+                <input type="text" name="organization" autocomplete="organization">
+              </label>
+              <label>
+                City
+                <input type="text" name="city" autocomplete="address-level2">
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Squad Details</legend>
+            <div class="field-grid">
+              <label>
+                Number of Players <span>*</span>
+                <input type="number" name="numberOfPlayers" min="11" max="15" required>
+              </label>
+              <label>
+                Team Jersey Colour
+                <input type="text" name="jerseyColour">
+              </label>
+              <label class="wide">
+                Playing XI - Player Names <span>*</span>
+                <textarea name="playingXi" rows="6" required placeholder="1. Player Name&#10;2. Player Name&#10;3. Player Name"></textarea>
+              </label>
+              <label class="wide">
+                Substitute Players - up to 4
+                <textarea name="substitutePlayers" rows="4" placeholder="1. Player Name&#10;2. Player Name"></textarea>
+              </label>
+              <label class="wide file-field">
+                Team Logo - Optional
+                <input type="file" name="teamLogo" accept="image/*">
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Declaration</legend>
+            <label class="checkbox-field">
+              <input type="checkbox" name="declaration" required>
+              <span>I confirm that the information provided is accurate, my team agrees to follow all tournament rules and regulations, and the decisions of the umpires and tournament organizers are final.</span>
+            </label>
+          </fieldset>
+
+          <div class="form-actions">
+            <p id="formStatus" role="status" aria-live="polite"></p>
+            <button type="submit">Submit Registration</button>
+          </div>
+        </form>
+      </section>
+    </section>
+
+    <section id="confirmation" class="confirmation" hidden>
+      <h2>Thank you for registering for the AMAALA Tape Ball Cricket Tournament 2026.</h2>
+      <p>Your registration has been received successfully. The organizing committee will contact the team captain to confirm participation and provide further tournament updates.</p>
+      <p>We look forward to seeing your team on 25 July 2026.</p>
+      <strong>One Team • One Dream • One Champion</strong>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
