@@ -79,7 +79,19 @@ module.exports = async function handler(request, response) {
   });
 
   if (!emailResponse.ok) {
-    return response.status(502).json({ message: "Registration received, but email delivery failed. Please check email settings." });
+    let resendError = "Please check email settings.";
+
+    try {
+      const errorData = await emailResponse.json();
+      resendError = errorData.message || errorData.error || resendError;
+      console.error("Resend email delivery failed:", errorData);
+    } catch (error) {
+      const errorText = await emailResponse.text();
+      resendError = errorText || resendError;
+      console.error("Resend email delivery failed:", errorText);
+    }
+
+    return response.status(502).json({ message: `Registration received, but email delivery failed. ${resendError}` });
   }
 
   return response.status(200).json({ message: "Registration submitted successfully." });
